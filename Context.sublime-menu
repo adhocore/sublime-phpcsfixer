@@ -1,0 +1,6 @@
+[
+    { 
+        "command": "phpcsfixer", 
+        "caption": "Fix with php-cs-fixer" 
+    }
+]

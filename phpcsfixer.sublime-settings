@@ -1,0 +1,17 @@
+{
+	// The file extensions the plugin works for
+	"phpcsfixer_file_extensions": ["php", "inc"],
+
+	// The full path of php executable, 
+	// use forward slash "/" as separator
+	"phpcsfixer_php_path": "D:/xampp/php/php.exe",
+
+	// The full path of php-cs-fixer.phar
+	// use forward slash "/" as separator
+	"phpcsfixer_phar_path": "D:/xampp/php/php-cs-fixer.phar",
+
+	// Extra options for php-cs-fixer
+	"phpcsfixer_options": {
+		"--level": "psr2"
+	}	
+}
