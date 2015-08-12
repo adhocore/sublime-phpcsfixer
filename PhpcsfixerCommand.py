@@ -7,12 +7,7 @@ class PhpcsfixerCommand(sublime_plugin.TextCommand):
     """A minimal PHP cs fixer plugin for sublime - by Jitendra Adhikari"""
     def run(self, edit):
         path = self.view.file_name()
-        ext  = os.path.splitext(path)[1]
         conf = sublime.load_settings('phpcsfixer.sublime-settings')
-
-        # Validate file type
-        if ext[1:] not in conf.get('phpcsfixer_file_extensions'):
-            return False
 
         # The command line params
         cmd = [
@@ -41,3 +36,10 @@ class PhpcsfixerCommand(sublime_plugin.TextCommand):
             data = proc.communicate()[0]
 
         return True
+
+    def is_enabled(self):
+        ext  = os.path.splitext(self.view.file_name())[1]
+        conf = sublime.load_settings('phpcsfixer.sublime-settings')
+
+        return ext[1:] in conf.get('phpcsfixer_file_extensions')
+
