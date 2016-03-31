@@ -3,10 +3,9 @@ import sublime
 import subprocess
 import sublime_plugin
 
-conf = sublime.load_settings('phpcsfixer.sublime-settings')
-
 def phpcsfix(view):
     path = view.file_name()
+    conf = sublime.load_settings('phpcsfixer.sublime-settings')
 
     # The command line params
     cmd = [
@@ -49,5 +48,6 @@ class PhpcsfixerCommand(sublime_plugin.TextCommand):
 
 class RunFixerOnSave(sublime_plugin.EventListener):
     def on_post_save(self, view):
+        conf = sublime.load_settings('phpcsfixer.sublime-settings')
         if conf.get('phpcsfixer_fix_on_save'):
             return phpcsfix(view)
