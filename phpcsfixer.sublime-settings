@@ -12,7 +12,7 @@
 
     // Extra options for php-cs-fixer
     "phpcsfixer_options": {
-        "--level": "symfony",
+        "--level": "psr2",
         "--fixers": "-psr0,short_tag,array_element_no_space_before_comma,array_element_white_space_after_comma,blankline_after_open_tag,duplicate_semicolon,extra_empty_lines,function_typehint_space,multiline_array_trailing_comma,namespace_no_leading_whitespace,no_empty_lines_after_phpdocs,object_operator,operators_spaces,remove_leading_slash_use,remove_lines_between_uses,return,single_blank_line_before_namespace,single_quote,spaces_before_semicolon,spaces_cast,ternary_spaces,trim_array_spaces,unalign_double_arrow,unused_use,whitespacy_lines,align_equals,short_array_syntax,short_echo_tag,phpdoc_separation,concat_with_spaces"
     },
 
